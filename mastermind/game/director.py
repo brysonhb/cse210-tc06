@@ -10,6 +10,8 @@ class Director:
         self._generate_number = GenerateNumber()
         self._roster = Roster()
         self._rule_manager = Rule_manager()
+        self.keep_playing = True
+        self._number = self._generate_number.get_number
 
     def start_game(self):
         pass

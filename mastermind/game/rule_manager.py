@@ -3,6 +3,7 @@ class Rule_manager:
     
     def __init__(self):
         self.hint = '****'
+        self.num_turn = -1
     
     
     def _get_hint(self, number, guess):
@@ -33,6 +34,17 @@ class Rule_manager:
             return False
         
         return True
+
+    def next_player(self):
+        """
+        If Ture, player 1's turn 
+        False, player 2's turn
+        """
+        self.num_turn += 1
+        if self.num_turn % 2 == 0:
+            return True
+        
+        return False
 
 
 
