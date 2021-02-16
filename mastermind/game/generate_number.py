@@ -14,8 +14,6 @@ class GenerateNumber:
         self.random_number = 0
         self.guess1 = '----'
         self.guess2 = '----'
-        # self.player1 = self.roster.player1
-        # self.player2 = self.roster.player2
         self.guesses = []
 
     def set_number(self):
@@ -39,15 +37,11 @@ class GenerateNumber:
         The get_guess method prompts the user to input their guess and returns that
         value to screen.
         """
-        # self.roster.set_name(self.player1, self.player2)
-        # self.guess1 = input(int(f'{self.player1} What is your guess? '))
-        # self.guess2 = input(int(f'{self.player2} What is your guess? '))
         print(f"{player}'s turn:")
         guess = str(input("What is your guess? "))
         print()
         return guess
 
-        # return self.guess1 and self.guess2
 
     def guess_call_1(self):
         """

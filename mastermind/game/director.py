@@ -22,7 +22,6 @@ class Director:
             self._do_outputs()
 
     def _prepare_game(self):
-        # self.number = self._generate_number.set_number()
         self.number = self._generate_number.set_number()
         print(self.number)
         self.players = self._roster.set_name()
@@ -31,7 +30,6 @@ class Director:
         self._screen.write(self.board)
         
     def _get_inputs(self):
-        #self.board = self._board.to_string(self.players, self.hints)
         self.player = self._rule_manager.get_current(self.players)
         self.guess = self._generate_number.get_guess(self.player)
 
@@ -48,4 +46,3 @@ class Director:
             self._screen.write(f"{self.player} won!")
         else:
             self._screen.write(self.board)
-        
