@@ -25,7 +25,7 @@ class Director:
         # self.number = self._generate_number.set_number()
         self.number = self._generate_number.set_number()
         print(self.number)
-        self.players = self._roster.get_name()
+        self.players = self._roster.set_name()
         self.hints = ["****", "****"]
         self.board = self._board.to_string(self.players, self.hints)
         self._screen.write(self.board)
@@ -45,7 +45,7 @@ class Director:
 
     def _do_outputs(self):
         if not self.keep_playing:
-            pass
+            self._screen.write(f"{self.player} won!")
         else:
-            pass
+            self._screen.write(self.board)
         
