@@ -5,22 +5,19 @@ class Board:
         The constructor of the Board class
         """
         self._spacer = '--------------------\n'
-        self._p1_guess = '----'
-        self._p2_guess = '----'
 
 
         pass
 
-    def to_string(self, p1_name, p2_name):
+    def to_string(self, p1_name, p2_name, p1_guess, p2_guess, p1_hint, p2_hint):
         """
         Formats the content to a string so that it can be displayed on the screen without issue
         Takes the names from the Roster class as arguments
         :return: string
         """
-        string = self._spacer + "Player " + p1_name + ': ' + p2_name + ', '
-        string +=
-
-        pass
+        string = self._spacer + "Player " + p1_name + ': ' + p1_guess + ', ' + hint + '\n'
+        string += "Player " + p2_name + ': ' + p2_guess + ', ' + hint + '\n' + self._spacer
+        return string
 
     def print_guesses(self):
         """
