@@ -1,5 +1,5 @@
 import random
-from roster import Roster
+from game.roster import Roster
 
 
 class GenerateNumber:
@@ -14,8 +14,8 @@ class GenerateNumber:
         self.random_number = 0
         self.guess1 = '----'
         self.guess2 = '----'
-        self.player1 = roster.player1
-        self.player2 = roster.player2
+        self.player1 = self.roster.player1
+        self.player2 = self.roster.player2
 
     def set_number(self):
         """
