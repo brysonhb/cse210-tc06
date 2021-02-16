@@ -1,5 +1,5 @@
-from board import Board
-from roster import Roster
+from game.board import Board
+from game.roster import Roster
 
 
 
