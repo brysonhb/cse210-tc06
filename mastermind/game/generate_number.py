@@ -17,6 +17,7 @@ class GenerateNumber:
         # self.player1 = self.roster.player1
         # self.player2 = self.roster.player2
         self.guesses = []
+
     def set_number(self):
         """
         The set_number method sets a number range and returns a random choice in
@@ -42,7 +43,7 @@ class GenerateNumber:
         # self.guess1 = input(int(f'{self.player1} What is your guess? '))
         # self.guess2 = input(int(f'{self.player2} What is your guess? '))
         print(f"{player}'s turn:")
-        guess = str(input("What is your gguess? "))
+        guess = str(input("What is your guess? "))
         print()
         return guess
 
