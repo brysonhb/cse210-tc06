@@ -1,16 +1,11 @@
-
-
 class Roster:
 
     def __init__(self):
         """
         The constructor method.
         """
-        # self._player1 = ''
-        # self._player2 = ''
-        # self.player1 = ''
-        # self.player2 = ''
         self._players = []
+
     def set_name(self):
         """
         The get_name method simply asks the players to input their names
