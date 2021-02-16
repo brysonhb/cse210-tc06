@@ -41,16 +41,3 @@ class GenerateNumber:
         guess = str(input("What is your guess? "))
         print()
         return guess
-
-
-    def guess_call_1(self):
-        """
-        This method just returns the value of guess 1.
-        """
-        return self.guess1
-
-    def guess_call_2(self):
-        """
-        This method just returns the value of guess 2.
-        """
-        return self.guess2
