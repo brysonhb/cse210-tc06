@@ -1,4 +1,5 @@
 import random
+from roster import Roster
 
 
 class GenerateNumber:
@@ -7,11 +8,14 @@ class GenerateNumber:
         """
         The constructor method.
         """
+        self.roster = Roster()
         self._number = 0
         self.guess = ''
         self.random_number = 0
         self.guess1 = '----'
         self.guess2 = '----'
+        self.player1 = roster.player1
+        self.player2 = roster.player2
 
     def set_number(self):
         """
@@ -34,6 +38,7 @@ class GenerateNumber:
         The get_guess method prompts the user to input their guess and returns that
         value to screen.
         """
+        self.roster.set_name(self.player1, self.player2)
         self.guess1 = input(int(f'{self.player1} What is your guess? '))
         self.guess2 = input(int(f'{self.player2} What is your guess? '))
 
