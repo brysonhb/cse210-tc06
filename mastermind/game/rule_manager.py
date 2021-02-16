@@ -1,9 +1,8 @@
-
 class Rule_manager:
     
     def __init__(self):
         self.hint = '****'
-        self.num_turn = -1
+        self.num_turn = 0
     
     
     def _get_hint(self, number, guess):
@@ -12,18 +11,19 @@ class Rule_manager:
         return hint: "****"
         """
         list_num = []
-        
+        list_hint = list(self.hint)
         for i in range(4):
             list_num.append(number[i:i+1])
         
         for i in range(4):
-            for j in range(4):
-                if guess[i:i+1] == list_num[j]:
-                    if i == j:
-                        self.hint[i:i+1] = 'x'
-                    else:
-                        self.hint[i:i+1] = 'o'
-        return self.hint
+            if guess[i:i+1] in list_num:
+                list_hint[i:i+1] = 'o'
+                if guess[i:i+1] == list_num[i]:
+                    list_hint[i:i+1] = 'x'
+        hint = ""
+        for i in list_hint:
+            hint += i
+        return hint
 
     def _game_over(self, number, guess):
         """
@@ -35,16 +35,15 @@ class Rule_manager:
         
         return True
 
+    def get_current(self, players):
+        """
+        return current player ..
+        """
+        return players[self.num_turn] 
+
     def next_player(self):
         """
-        If Ture, player 1's turn 
-        False, player 2's turn
+        return 0 or 1, it will determine the turn
         """
-        self.num_turn += 1
-        if self.num_turn % 2 == 0:
-            return True
-        
-        return False
-
-
-
+        self.num_turn = (self.num_turn + 1 ) % 2
+        return self.num_turn
