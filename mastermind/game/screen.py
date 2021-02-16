@@ -2,18 +2,21 @@ from game.board import Board
 from game.roster import Roster
 
 
-
-
-
 class Screen:
 
     def __init__(self):
         self.board = Board()
+
         # self.player_1 = roster.player1
         # self.player_2 = roster.player2
     
     def write(self, text):
         print(text)
+
+        self.roster = Roster()
+        self.player_1 = self.roster.player1
+        self.player_2 = self.roster.player2
+
        
 """
 The resposibility of this class is to take 
