@@ -15,8 +15,8 @@ class Board:
         Takes the names from the Roster class as arguments
         :return: string
         """
-        string = self._spacer + "Player " + p1_name + ': ' + p1_guess + ', ' + hint + '\n'
-        string += "Player " + p2_name + ': ' + p2_guess + ', ' + hint + '\n' + self._spacer
+        string = self._spacer + "Player " + p1_name + ': ' + p1_guess + ', ' + p1_hint + '\n'
+        string += "Player " + p2_name + ': ' + p2_guess + ', ' + p2_hint + '\n' + self._spacer
         return string
 
     def print_guesses(self):
