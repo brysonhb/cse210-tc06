@@ -38,7 +38,7 @@ class GenerateNumber:
         value to screen.
         """
         print(f"{player}'s turn:")
-        guess = str(input("What is your guess?"))
+        guess = str(input("What is your guess? "))
 
         while 1 == 1:
             if guess.isnumeric():
