@@ -38,6 +38,11 @@ class GenerateNumber:
         value to screen.
         """
         print(f"{player}'s turn:")
-        guess = str(input("What is your guess? "))
-        print()
-        return guess
+        guess = str(input("What is your guess?"))
+
+        while 1 == 1:
+            if guess.isnumeric():
+                print()
+                return guess
+            else:
+                guess = str(input("Please only guess numbers: "))
